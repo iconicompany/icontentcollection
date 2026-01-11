@@ -2,10 +2,15 @@
   "name": "icontentcollection",
   "module": "index.ts",
   "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
+  "scripts": {
+    "sync": "bun ./src/sync.ts",
+    "test": "bun ./src/sync.test.ts",
+    "dev": "bun --hot src/index.ts"
   },
-  "peerDependencies": {
-    "typescript": "^5"
+  "dependencies": {
+    "@types/adm-zip": "^0.5.7",
+    "adm-zip": "^0.5.16",
+    "bun-types": "latest",
+    "gray-matter": "^4.0.3"
   }
 }
