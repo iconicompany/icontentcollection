@@ -1,6 +1,10 @@
 {
-  "name": "icontentcollection",
-  "module": "index.ts",
+  "name": "@iconicompany/icontentcollection",
+  "version": "1.0.12",
+  "description": "Content collection system for iMarketplace",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "types": "src/index.ts",
   "type": "module",
   "scripts": {
     "sync": "bun ./src/sync.ts",
@@ -10,7 +14,9 @@
   "dependencies": {
     "@types/adm-zip": "^0.5.7",
     "adm-zip": "^0.5.16",
-    "bun-types": "latest",
     "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
   }
 }

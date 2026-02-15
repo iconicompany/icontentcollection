@@ -1,6 +1,6 @@
 import { writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
-import type { Post } from "../database";
+import type { Post } from "../collections/base";
 
 export interface SiteConfig {
   title: string;

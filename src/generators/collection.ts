@@ -1,10 +1,7 @@
 import matter from "gray-matter";
-import type { ContentCollection } from "../collections/base";
-import type { ContentDatabase, Post } from "../database";
+import type { ContentCollection, Post } from "../collections/base";
 
-export class SQLiteGenerator {
-    constructor(private db: ContentDatabase) { }
-
+export class CollectionGenerator {
     async sync(collection: ContentCollection, paths: string[]): Promise<Post[]> {
         const allPosts: Post[] = [];
 
@@ -39,9 +36,8 @@ export class SQLiteGenerator {
                         body,
                     };
 
-                    this.db.upsertPost(post);
                     allPosts.push(post);
-                    console.log(`✅ Synced [${lang}] ${post.slug}`);
+                    console.log(`✅ Parsed [${lang}] ${post.slug}`);
                 }
             } catch (e: any) {
                 console.warn(`⚠️ Error syncing path ${contentPath}: ${e.message}`);

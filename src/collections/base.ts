@@ -1,4 +1,16 @@
-import type { Post } from "../database";
+export interface Post {
+    slug: string;
+    lang: string;
+    title: string;
+    description: string;
+    date: string;
+    published: boolean;
+    tags: string[];
+    authors: string[];
+    image?: string;
+    body: string;
+    lastSyncedAt?: number;
+}
 
 export interface File {
     name: string;

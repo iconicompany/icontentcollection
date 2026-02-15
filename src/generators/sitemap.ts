@@ -1,6 +1,6 @@
 import { writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
-import type { Post } from "../database";
+import type { Post } from "../collections/base";
 import { PUBLIC_DATA_DIR } from "../config";
 import type { SiteConfig } from "./rss";
 

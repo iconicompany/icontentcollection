@@ -2,8 +2,7 @@ import { ContentSyncService, type SyncOptions } from "./sync";
 import { GithubContentCollection } from "./collections/github";
 import { GithubZipContentCollection } from "./collections/zip";
 import { RSSGenerator } from "./generators/rss";
-import { ContentDatabase } from "./database";
-import { DB_PATH, PUBLIC_DATA_DIR, DATA_DIR } from "./config";
+import { PUBLIC_DATA_DIR, DATA_DIR } from "./config";
 
 const baseOptions: SyncOptions = {
     site: {
